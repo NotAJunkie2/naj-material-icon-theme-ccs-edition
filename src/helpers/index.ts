@@ -11,8 +11,8 @@ export const getConfig = (section?: string) => {
 
 /** Get list of configuration entries of package.json */
 export const getConfigProperties = (): { [config: string]: unknown } => {
-  return extensions.getExtension('PKief.material-icon-theme-ccs-edition')?.packageJSON
-    ?.contributes?.configuration?.properties;
+  return extensions.getExtension('PKief.material-icon-theme-ccs-edition')
+    ?.packageJSON?.contributes?.configuration?.properties;
 };
 
 /** Update configuration of vs code. */
@@ -34,7 +34,11 @@ export const setThemeConfig = (
   value: any,
   global: boolean = false
 ) => {
-  return getConfig('material-icon-theme-ccs-edition').update(section, value, global);
+  return getConfig('material-icon-theme-ccs-edition').update(
+    section,
+    value,
+    global
+  );
 };
 
 /**
@@ -60,7 +64,8 @@ export const isThemeNotVisible = (): boolean => {
 
 /** Return the path of the extension in the file system. */
 const getExtensionPath = () =>
-  extensions.getExtension('PKief.material-icon-theme-ccs-edition')?.extensionPath ?? '';
+  extensions.getExtension('PKief.material-icon-theme-ccs-edition')
+    ?.extensionPath ?? '';
 
 /** Get the configuration of the icons as JSON Object */
 export const getMaterialIconsJSON = (): IconConfiguration => {

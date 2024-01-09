@@ -19,7 +19,10 @@ const setIconTheme = async () => {
 
     // local workspace config
     if (getConfig().inspect('workbench.iconTheme')?.workspaceValue) {
-      getConfig().update('workbench.iconTheme', 'material-icon-theme-ccs-edition');
+      getConfig().update(
+        'workbench.iconTheme',
+        'material-icon-theme-ccs-edition'
+      );
     }
     codeWindow.showInformationMessage(translate('activated'));
   } catch (error) {
