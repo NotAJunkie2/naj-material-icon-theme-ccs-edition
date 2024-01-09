@@ -2508,5 +2508,7 @@ export const fileIcons: FileIcons = {
         '.k8s.yaml',
       ],
     },
+    { name: 'ccs', fileExtensions: ['ccs'] },
+    { name: 'dz', fileExtensions: ['dz'] },
   ],
 };

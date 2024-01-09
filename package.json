@@ -1,8 +1,8 @@
 {
-  "name": "material-icon-theme",
-  "displayName": "Material Icon Theme",
-  "description": "Material Design Icons for Visual Studio Code",
-  "version": "4.32.0",
+  "name": "material-icon-theme-ccs-edition",
+  "displayName": "Material Icon Theme CCS Edition",
+  "description": "Fork of the Material Design Icons for Visual Studio Code - I AM NOT THE ORIGINAL AUTHOR",
+  "version": "1.0.0",
   "scripts": {
     "build": "npm run compile:dev && npm run generateJson",
     "check": "ts-node ./src/scripts/icons/checks",
@@ -25,26 +25,13 @@
     "version": "npm run changelog && git add CHANGELOG.md",
     "vscode:prepublish": "npm run lint && npm run compile && npm run package-web"
   },
-  "publisher": "PKief",
-  "author": {
-    "name": "Philipp Kief",
-    "email": "philipp.kief@gmx.de",
-    "url": "https://pkief.github.io"
-  },
-  "funding": "https://github.com/sponsors/PKief",
-  "sponsor": {
-    "url": "https://github.com/sponsors/PKief"
-  },
+  "publisher": "NotAJunkie",
   "engines": {
     "vscode": "^1.51.0"
   },
-  "homepage": "https://github.com/PKief/vscode-material-icon-theme/blob/main/README.md",
   "repository": {
     "type": "git",
-    "url": "https://github.com/PKief/vscode-material-icon-theme.git"
-  },
-  "bugs": {
-    "url": "https://github.com/PKief/vscode-material-icon-theme/issues"
+    "url": "https://github.com/PKief/vscode-material-icon-theme-ccs-edition.git"
   },
   "icon": "logo.png",
   "galleryBanner": {
@@ -55,11 +42,7 @@
     "Themes"
   ],
   "keywords": [
-    "icons",
-    "theme",
-    "material",
-    "icon-theme",
-    "customization"
+    "CCS"
   ],
   "extensionKind": [
     "ui",
@@ -84,7 +67,7 @@
   "contributes": {
     "iconThemes": [
       {
-        "id": "material-icon-theme",
+        "id": "material-icon-theme-ccs-edition",
         "label": "Material Icon Theme",
         "path": "./dist/material-icons.json",
         "_watch": true
@@ -92,52 +75,52 @@
     ],
     "commands": [
       {
-        "command": "material-icon-theme.activateIcons",
+        "command": "material-icon-theme-ccs-edition.activateIcons",
         "title": "%command.activateIcons%",
         "enablement": "!isWeb"
       },
       {
-        "command": "material-icon-theme.toggleIconPacks",
+        "command": "material-icon-theme-ccs-edition.toggleIconPacks",
         "title": "%command.toggleIconPacks%",
         "enablement": "!isWeb"
       },
       {
-        "command": "material-icon-theme.changeFolderTheme",
+        "command": "material-icon-theme-ccs-edition.changeFolderTheme",
         "title": "%command.changeFolderTheme%",
         "enablement": "!isWeb"
       },
       {
-        "command": "material-icon-theme.changeFolderColor",
+        "command": "material-icon-theme-ccs-edition.changeFolderColor",
         "title": "%command.changeFolderColor%",
         "enablement": "!isWeb"
       },
       {
-        "command": "material-icon-theme.changeFileColor",
+        "command": "material-icon-theme-ccs-edition.changeFileColor",
         "title": "%command.changeFileColor%",
         "enablement": "!isWeb"
       },
       {
-        "command": "material-icon-theme.restoreDefaultConfig",
+        "command": "material-icon-theme-ccs-edition.restoreDefaultConfig",
         "title": "%command.restoreDefaultConfig%",
         "enablement": "!isWeb"
       },
       {
-        "command": "material-icon-theme.toggleExplorerArrows",
+        "command": "material-icon-theme-ccs-edition.toggleExplorerArrows",
         "title": "%command.toggleExplorerArrows%",
         "enablement": "!isWeb"
       },
       {
-        "command": "material-icon-theme.changeOpacity",
+        "command": "material-icon-theme-ccs-edition.changeOpacity",
         "title": "%command.changeOpacity%",
         "enablement": "!isWeb"
       },
       {
-        "command": "material-icon-theme.toggleGrayscale",
+        "command": "material-icon-theme-ccs-edition.toggleGrayscale",
         "title": "%command.toggleGrayscale%",
         "enablement": "!isWeb"
       },
       {
-        "command": "material-icon-theme.changeSaturation",
+        "command": "material-icon-theme-ccs-edition.changeSaturation",
         "title": "%command.changeSaturation%",
         "enablement": "!isWeb"
       }
@@ -146,7 +129,7 @@
       "type": "object",
       "title": "%configuration.title%",
       "properties": {
-        "material-icon-theme.activeIconPack": {
+        "material-icon-theme-ccs-edition.activeIconPack": {
           "type": "string",
           "default": "angular",
           "description": "%configuration.activeIconPack%",
@@ -173,22 +156,22 @@
             "none"
           ]
         },
-        "material-icon-theme.files.associations": {
+        "material-icon-theme-ccs-edition.files.associations": {
           "type": "object",
           "default": {},
           "description": "%configuration.files.associations%"
         },
-        "material-icon-theme.folders.associations": {
+        "material-icon-theme-ccs-edition.folders.associations": {
           "type": "object",
           "default": {},
           "description": "%configuration.folders.associations%"
         },
-        "material-icon-theme.languages.associations": {
+        "material-icon-theme-ccs-edition.languages.associations": {
           "type": "object",
           "default": {},
           "description": "%configuration.languages.associations%"
         },
-        "material-icon-theme.folders.theme": {
+        "material-icon-theme-ccs-edition.folders.theme": {
           "type": "string",
           "default": "specific",
           "description": "%configuration.folders.theme%",
@@ -203,31 +186,31 @@
             "none"
           ]
         },
-        "material-icon-theme.folders.color": {
+        "material-icon-theme-ccs-edition.folders.color": {
           "type": "string",
           "default": "#90a4ae",
           "pattern": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$",
           "description": "%configuration.folders.color%"
         },
-        "material-icon-theme.files.color": {
+        "material-icon-theme-ccs-edition.files.color": {
           "type": "string",
           "default": "#90a4ae",
           "pattern": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$",
           "description": "%configuration.files.color%"
         },
-        "material-icon-theme.opacity": {
+        "material-icon-theme-ccs-edition.opacity": {
           "type": "number",
           "default": 1,
           "minimum": 0,
           "maximum": 1,
           "description": "%configuration.opacity%"
         },
-        "material-icon-theme.hidesExplorerArrows": {
+        "material-icon-theme-ccs-edition.hidesExplorerArrows": {
           "type": "boolean",
           "default": false,
           "description": "%configuration.hidesExplorerArrows%"
         },
-        "material-icon-theme.saturation": {
+        "material-icon-theme-ccs-edition.saturation": {
           "type": "number",
           "default": 1,
           "minimum": 0,
